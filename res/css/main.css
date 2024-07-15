@@ -15,6 +15,12 @@ body {
     height: 100vh; /* or any height you want */
 }
 
+#count {
+    color: rgba(128, 128, 128, 0.521);
+    font-size: 55px;
+    font-weight: 400;
+}
+
 .film-grain {
     position: fixed;
     top: 0;

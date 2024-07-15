@@ -13,8 +13,10 @@
         <link rel="stylesheet" href="res/css/main.css">
     </head>
     <script>
-        
         document.addEventListener('click', function() {
+            const aa = document.getElementById('tick');
+            aa.muted = false;
+            aa.play()
             const audio = document.getElementById('audio');
             audio.muted = false;
             audio.play()
@@ -27,12 +29,45 @@
             audio.play()
                
         });
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var countDownDate = new Date("Jul 20, 2024 15:30:00").getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("count").innerHTML = days + "D " + hours + "H "
+            + minutes + "M " + seconds + "S";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("count").innerHTML = "Aguarde...";
+            }
+            }, 1000);
+        });
     </script>
     <body>
         <audio id="input" src="res/audio/write.mp3" muted></audio>
         <audio id="audio" src="res/audio/SCARYSONG.mp3" muted></audio>
-        <div id="penis">        
-            <input placeholder="password" id="Input" maxlength="8">
+        <audio id="tick" src="res/audio/clock.mp3" muted></audio>
+
+        <div id="penis">   
+            <h1 id="count"></h1>     
+            
+            <!-- <input placeholder="password" id="Input" maxlength="8"> -->
         </div>
         <div class="film-grain"></div>
         <div class="vig"></div>

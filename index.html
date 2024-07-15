@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Guivirme.EXE Scary Game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="res/css/main.css">
+    </head>
+    <script>
+        
+        document.addEventListener('click', function() {
+            const audio = document.getElementById('audio');
+            audio.muted = false;
+            audio.play()
+              
+        });
+        document.addEventListener('keydown', function(event) {
+            const audio = document.getElementById('input');
+            audio.muted = false;
+            audio.currentTime = 0; // Reset audio playback position to start
+            audio.play()
+               
+        });
+    </script>
+    <body>
+        <audio id="input" src="res/audio/write.mp3" muted></audio>
+        <audio id="audio" src="res/audio/SCARYSONG.mp3" muted></audio>
+        <div id="penis">        
+            <input placeholder="password" id="Input" maxlength="8">
+        </div>
+        <div class="film-grain"></div>
+        <div class="vig"></div>
+        <script src="" async defer></script>
+    </body>
+</html>

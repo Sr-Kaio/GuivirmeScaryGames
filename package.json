@@ -1,0 +1,22 @@
+{
+  "name": "guivirmescarygame",
+  "version": "1.0.0",
+  "description": "SCARY",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sr-Kaio/GuivirmeScaryGames.git"
+  },
+  "keywords": [
+    "scary"
+  ],
+  "author": "Sr Kaio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sr-Kaio/GuivirmeScaryGames/issues"
+  },
+  "homepage": "https://github.com/Sr-Kaio/GuivirmeScaryGames#readme"
+}

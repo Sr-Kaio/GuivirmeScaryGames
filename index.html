@@ -20,6 +20,10 @@
             const audio = document.getElementById('tick');
             audio.play()
             pp.classList.add("fadeout")
+            pp.addEventListener("animationend", () => {
+                pp.style.display = "none"
+                window.location = "https://sr-kaio.itch.io/guivirmeexe-scary-game";
+            });
         }
         document.addEventListener('click', function() {
             const audio = document.getElementById('audio');

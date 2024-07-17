@@ -10,6 +10,7 @@ body {
 
 #penis {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh; /* or any height you want */
@@ -17,7 +18,7 @@ body {
 
 #count {
     color: rgba(128, 128, 128, 0.521);
-    font-size: 55px;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -37,7 +38,25 @@ body {
     z-index: 2;
 }
 
+.download {
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+    padding: 12px 30px;
+    background-color: rgba(165, 42, 42, 0.534);
+    box-shadow: 0px 0px 20px rgba(165, 42, 42, 0.534);
+    color: rgba(128, 128, 128, 0.521);
+    transition-duration: .3s;
+}
 
+.download:hover {
+
+    box-shadow: 0px 0px 40px rgba(165, 42, 42, 0.8);
+}
 .vig {
     position: fixed;
     top: 0;
@@ -50,6 +69,10 @@ body {
     pointer-events: none;
     opacity: 0.6; /* Adjust opacity to taste */
     z-index: 3;
+}
+
+.fadeout {
+    animation: fadeOut 4s ease-in; /* Animation */
 }
 
 @keyframes fadeInVig {
@@ -82,5 +105,15 @@ input:focus {
     }
     to {
         opacity: 0.1; /* Adjust opacity to taste */
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        
+    }
+    to {
+        opacity: 0; /* Adjust opacity to taste */
     }
 }
